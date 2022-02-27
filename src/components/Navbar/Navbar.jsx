@@ -12,7 +12,7 @@ const Navbar = () => {
             { user !== null && 
             <ul>
                 <li>
-                    <NavLink to="/translations">Translations</NavLink>
+                    <NavLink to="/translation">Translations</NavLink>
                 </li>
                 <li>
                     <NavLink to="/profile">Profile</NavLink>

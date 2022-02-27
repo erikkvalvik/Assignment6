@@ -35,6 +35,7 @@ const LoginForm = () => {
     // Event handlers
     const onSubmit = async ({ username }) => {
         setLoading(true)
+        
         const [error, userResponse] = await loginUser(username)
         if(error !== null){
             setApiError(error)
