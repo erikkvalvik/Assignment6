@@ -1,7 +1,23 @@
 # ASSIGNMENT 6:  
 ## Lost in translation
 
-# 
+#
+**Run `npm install` in root directory before starting the application.**
+### About the app:
+In this application you:
+- Create or log in to existing user
+- Get redirected to your profile page
+    - Profile shows your translation history
+- You can go to the translation page
+    - On the translation page you can enter your desired text into the input field and the corresponding hand signs will be returned to you.
+    - *No numbers or special characters*
+
+
+
+![Component tree](/public/Assets/LostInTranslation.png)
+*Component tree for the application*
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
