@@ -8,6 +8,8 @@ const Profile = () => {
 
     const { user } = useUser()
 
+
+
     return (
         <>
             <h1>Profile</h1>
