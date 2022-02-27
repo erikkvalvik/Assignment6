@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { loginUser } from '../../api/user'
 import { storageSave } from '../../utils/storage';
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext';
+import { STORAGE_KEY_USER } from '../../const/storageKeys';
 
 const usernameConfig = {
     required: true,
@@ -18,6 +19,7 @@ const LoginForm = () => {
         formState: { errors }
     } = useForm()
     const { user, setUser } = useUser()
+    const navigate = useNavigate()
 
     // Local State
     const [ loading, setLoading ] = useState(false)
@@ -25,8 +27,10 @@ const LoginForm = () => {
 
     // Side Effects
     useEffect(() => {
-        console.log('user has changed', user)
-    }, [ user ]) // Empty Deps = Only run once
+        if(user !== null){
+            navigate('/profile')
+        }
+    }, [ user, navigate ]) // Empty Deps = Only run once
 
     // Event handlers
     const onSubmit = async ({ username }) => {
@@ -36,7 +40,7 @@ const LoginForm = () => {
             setApiError(error)
         }
         if(userResponse !== null){
-            storageSave('translation-user', userResponse)
+            storageSave(STORAGE_KEY_USER, userResponse)
             setUser(userResponse)
         }
         setLoading(false)

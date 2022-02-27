@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import { useController } from "react-hook-form";
+import { STORAGE_KEY_USER } from "../const/storageKeys";
+import { storageRead } from "../utils/storage";
 
 // Context -> exposing
 const UserContext = createContext()
@@ -12,7 +14,7 @@ export const useUser = () => {
 
 const UserProvider = (props) => {
 
-    const[ user, setUser ] = useState(null)
+    const[ user, setUser ] = useState(storageRead(STORAGE_KEY_USER))
 
     const state = {
         user,
