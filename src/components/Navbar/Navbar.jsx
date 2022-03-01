@@ -5,19 +5,19 @@ const Navbar = () => {
     const { user } = useUser()
 
     return ( 
-        <nav>
+        <nav className="navbar">
             <ul>
                 <li>Translations</li>
             </ul>
             { user !== null && 
-            <ul>
-                <li>
-                    <NavLink to="/translation">Translations</NavLink>
+            <ul className="navigation">
+                <li className="navlinkbutton">
+                    <NavLink className="navlink" to="/translation">Translations</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/profile">Profile</NavLink>
+                <li className="navlinkbutton">
+                    <NavLink className="navlink" to="/profile">Profile</NavLink>
                 </li>
-            </ul>
+            </ul>   
             }
         </nav>
     )

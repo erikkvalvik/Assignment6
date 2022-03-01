@@ -28,9 +28,9 @@ const TranslationForm = ( { onTranslate} ) => {
     
     return(
         <>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="translation-form" onSubmit={handleSubmit(onSubmit)}>
             <fieldset>
-                <input 
+                <input className="translation-input"
                     type="text"
                     placeholder="type something.."
                     { ...register("translation", translationConfig)}
@@ -44,6 +44,7 @@ const TranslationForm = ( { onTranslate} ) => {
                 
                 <ul className="hand-sign-list">
                     {messageArray.map(function(name, index){
+                        if(name === " ") return <li key= {index}><p className="space"></p></li>
                         return <li key={index}><img className="hand-sign-img" src={"Assets/individial_signs/" + name + ".png"} alt="" /></li>
                     })}
                 </ul>

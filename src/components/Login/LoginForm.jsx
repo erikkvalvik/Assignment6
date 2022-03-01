@@ -63,7 +63,7 @@ const LoginForm = () => {
     return(
         <>
             <h2>Whats your name?</h2>
-            <form onSubmit={ handleSubmit(onSubmit) }>
+            <form className='loginform' onSubmit={ handleSubmit(onSubmit) }>
                 <fieldset>
                     <label htmlFor="username">Username: </label>
                     <input 
@@ -73,7 +73,7 @@ const LoginForm = () => {
                        {errorMessage}
                 </fieldset>
 
-                <button type="submit" disabled={ loading }>Continue</button>
+                <button className='loginbtn' type="submit" disabled={ loading }>Continue</button>
 
                 { loading &&  <p>Logging in...</p>}
                 { apiError && <p>{ apiError }</p>}

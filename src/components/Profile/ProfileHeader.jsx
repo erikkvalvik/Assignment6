@@ -1,6 +1,6 @@
 const ProfileHeader = ({ username }) => {
     return(
-        <header>
+        <header className="profile-header">
             <h4>Hello, welcome back { username }</h4>
         </header>
     )

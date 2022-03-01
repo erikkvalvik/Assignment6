@@ -38,7 +38,7 @@ const ProfileActions = ({ logout }) => {
     }
 
     return(
-        <ul>
+        <ul className="profile-actions">
             <li><Link to="/translation">Translations</Link></li>
             <li><button onClick={ handleCLearHistoryClick }>Clear history</button></li>
             <li><button onClick={ handleLogoutClick }>Logout</button></li>

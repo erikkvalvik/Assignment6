@@ -1,14 +1,24 @@
+
 .hand-sign-container{
+    margin-top: 2vw;
+    
+    background-color: rgba(142, 253, 216, 0.555);
     width: 100vw;
-    border: 2px solid red;
+    text-align: center;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 3px 4px 14px -4px rgba(0,0,0,0.69)
 
 
 }
+.space{
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
 .hand-sign-list{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 90vw;
     display: flex;
     flex-wrap: wrap;
@@ -23,4 +33,102 @@ ul{
     flex-direction: row;
     list-style-type: none;
     list-style-position: inside;
+}
+.navbar{
+    background-color: rgb(137, 228, 228);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 10vw;
+    /* border: 2px solid red; */
+}
+.navigation{
+    margin-right: 10vw;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+}
+.navlinkbutton{
+    margin: 0px 10px 0px 0px;
+}
+.navlink{
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+fieldset{
+    
+    border: none;
+    margin: 0vw 10vw 0vw 10vw;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    background-color: chartreuse;
+    padding: 10px;
+    width: 100px;
+    box-shadow: 3px 4px 14px -4px rgba(0,0,0,0.69);
+}
+button:hover{
+    background-color: rgb(114, 223, 5);
+}
+button:active{
+    background-color: rgb(156, 252, 59);
+}
+
+.translation-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.translation-input{
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 50vw;
+    height: 3vw;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 3px 4px 14px -4px rgba(0,0,0,0.69);}
+
+.profile-header{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.profile-actions{
+    height: 12vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.translation-history{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+h2{
+    text-align: center;
+}
+.loginform{
+    margin-left: 25vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.loginbtn{
+    position: absolute;
+    left: 193px;
+    right: 0px;
+    top: 40px;
+
 }
