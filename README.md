@@ -1,6 +1,9 @@
 # ASSIGNMENT 6:  
 ## Lost in translation
 
+App deployed to heroku on:  
+[Lost-In-Translation](https://enigmatic-reef-22322.herokuapp.com/)
+
 #
 **Run `npm install` in root directory before starting the application.**
 ### About the app:
